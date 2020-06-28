@@ -1,3 +1,6 @@
+/**
+ * 剪绳子，绳子长度乘积最大
+ */
 public class Question14 {
     public static void main(String[] args) {
         int length = 8;

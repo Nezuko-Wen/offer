@@ -1,3 +1,6 @@
+/**
+ *
+ */
 public class Question13 {
     static int maxRow = 3;
     static int maxCol = 3;

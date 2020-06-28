@@ -1,3 +1,6 @@
+/**
+ * 矩阵中是否含有某字符串
+ */
 public class Question12 {
     public static void main(String[] args) {
         char[][] proNums = new char[][]{{'a','b','e'},{'c','d','f'},{'g','h','i'}};

@@ -1,3 +1,6 @@
+/**
+ * 合并两个有序链表
+ */
 public class Question25 {
     public static void main(String[] args) {
         ListNode head1 = new ListNode(6);

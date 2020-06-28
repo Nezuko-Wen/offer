@@ -1,3 +1,6 @@
+/**
+ * 一个数的二进制含有多少个1
+ */
 public class Question15 {
     public static void main(String[] args) {
         int a = 5;

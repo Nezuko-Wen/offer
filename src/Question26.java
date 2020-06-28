@@ -1,3 +1,6 @@
+/**
+ * 一个树是否包含另一个树
+ */
 public class Question26 {
     private static boolean findRoot = false;
     public static void main(String[] args) {

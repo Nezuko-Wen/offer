@@ -1,3 +1,6 @@
+/**
+ * 寻找链表中环的入口节点
+ */
 public class Question23 {
     public static void main(String[] args) {
         ListNode head = new ListNode(1);

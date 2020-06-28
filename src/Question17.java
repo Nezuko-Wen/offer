@@ -1,3 +1,6 @@
+/**
+ * 输出1-n位数，1-3位数即1-999
+ */
 public class Question17 {
     public static void main(String[] args) {
         int condition = 3;
