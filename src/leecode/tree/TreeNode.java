@@ -29,7 +29,7 @@ public class TreeNode {
             }
       }
 
-      public void preorderTraversalPrint(TreeNode root) {
+      public static void preorderTraversalPrint(TreeNode root) {
             if (root != null) {
                   System.out.println(root.val);
                   preorderTraversalPrint(root.left);

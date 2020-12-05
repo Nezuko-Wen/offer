@@ -1,7 +1,5 @@
 package leecode.tree;
 
-import sun.tools.jstack.JStack;
-
 import java.util.Stack;
 
 /**
