@@ -1,0 +1,14 @@
+/out/production/offer/leecode/tree/*.class
+/out/production/offer/utils/*.class
+/out/production/offer/offer/*.class
+/out/production/offer/algorithm/*.class
+/out/production/offer/sort/*.class
+/.idea/*.xml
+/out/production/offer/brainstorming/*.class
+/src/utils/*.class
+/out/production/offer/leecode/*.class
+/out/production/offer/linklist/*.class
+/out/production/offer/bitoperation/*.class
+/*.iml
+/.idea/*.iml
+/out/production/offer/queue/*.class
