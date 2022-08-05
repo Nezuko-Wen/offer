@@ -37,3 +37,19 @@ public class OneCount {
     }
 }
 ```
+# 栈
+### 用栈实现队列
+### O(1)复杂度获取栈中最小值
+# 队列
+### 用队列实现栈
+### 环形队列
+
+# hash
+# 递归
+### master公式
+> 形如
+> T(N) = a * T(N/b) + O(N^d)(其中的a、b、d都是常数)
+> 的递归函数，可以直接通过Master公式来确定时间复杂度
+> 如果 log(b,a) < d，复杂度为O(N^d)
+> 如果 log(b,a) > d，复杂度为O(N^log(b,a))
+> 如果 log(b,a) == d，复杂度为O(N^d * logN)
