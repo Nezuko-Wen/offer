@@ -1,6 +1,4 @@
-package sort;
-
-import javax.sound.midi.Soundbank;
+package algorithm.sort;
 
 /**
  * 冒泡排序

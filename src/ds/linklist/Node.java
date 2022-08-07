@@ -1,4 +1,4 @@
-package linklist;
+package ds.linklist;
 
 /**
  * @author Wen

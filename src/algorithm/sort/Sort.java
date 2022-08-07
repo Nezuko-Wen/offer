@@ -1,4 +1,4 @@
-package sort;
+package algorithm.sort;
 
 public abstract class Sort<T extends Comparable<T>> {
 

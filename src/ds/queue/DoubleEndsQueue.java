@@ -1,6 +1,6 @@
-package queue;
+package ds.queue;
 
-import linklist.DoubleNode;
+import ds.linklist.DoubleNode;
 
 /**
  * @author Wen
