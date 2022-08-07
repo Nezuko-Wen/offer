@@ -43,6 +43,50 @@ public class OneCount {
 # 队列
 ### 用队列实现栈
 ### 环形队列
+```java
+public class CircularQueue {
+    private int[] table;
+    private int size = 0; //元素个数
+    private int front = 0; //队头
+    private int rear = 0; //队尾
+    private final int limit;
+
+    private static final int DEFAULT_LIMIT = 10;
+
+    public CircularQueue() {
+        this.limit = DEFAULT_LIMIT;
+        table = new int[limit];
+    }
+
+    public CircularQueue(int limit) {
+        this.limit = limit;
+        table = new int[limit];
+    }
+
+    public void put(int val) {
+        if (size == limit) {
+            throw new RuntimeException("当前队列已满");
+        }
+        size ++;
+        table[rear] = val;
+        rear = rear == limit - 1 ? 0 : rear + 1;
+    }
+
+    public int pop() {
+        if (size == 0) {
+            throw new RuntimeException("当前队列为空");
+        }
+        size --;
+        int ret = table[front];
+        front = front == limit - 1 ? 0 : front + 1;
+        return ret;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+}
+```
 
 # hash
 # 递归
