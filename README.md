@@ -51,3 +51,48 @@ public class OneCount {
 如果 log(b,a) < d，复杂度为O(N^d)<br />
 如果 log(b,a) > d，复杂度为O(N^log(b,a))<br />
 如果 log(b,a) == d，复杂度为O(N^d * logN)<br />
+
+### 归并排序
+```java
+    private void mergeSplit(T[] nums, int l, int r) {
+        if (l == r) {
+            return;
+        }
+        int mid = l + ((r - l) >> 1);
+        mergeSplit(nums, l, mid);
+        mergeSplit(nums, mid + 1, r);
+        merge(nums, l, mid, r);
+    }
+
+    private void merge(T[] nums, int l, int mid, int r) {
+        int left = l;
+        int right = mid + 1;
+        List<T> temp = new ArrayList<>(r - l + 1);
+        while (left <= mid && right <= r) {
+            if (less(nums[left], nums[right])) {
+                temp.add(nums[left++]);
+            } else {
+                temp.add(nums[right++]);
+            }
+        }
+        while (left <= mid) {
+            temp.add(nums[left++]);
+        }
+        while (right <= r) {
+            temp.add(nums[right++]);
+        }
+        for (int i = 0; i < temp.size(); i++) {
+            nums[l + i] = temp.get(i);
+        }
+    }
+```
+归并思想可解决 找某个数左边或右边某种数的问题
+1. 小数和
+把一个数的左边小于该数的数叫小数，求所有小数的和。<br />
+eg: [1,3,4,2,5]<br />
+1没有小数<br />
+3的小数:1<br />
+4的小数:1,3<br />
+2的小数:1<br />
+5的小数:1,3,4,2<br />
+小数和为:1+1+3+1+1+3+4+2

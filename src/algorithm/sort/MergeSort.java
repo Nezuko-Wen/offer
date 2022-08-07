@@ -12,25 +12,27 @@ public class MergeSort<T extends Comparable<T>> extends Sort<T> {
     @Override
     public void sort(T[] nums) {
         int l = 0, r = nums.length - 1;
-        merge(nums, l, r);
+        mergeSplit(nums, l, r);
     }
 
-    private void merge(T[] nums, int l, int r) {
+    private void mergeSplit(T[] nums, int l, int r) {
         if (l == r) {
             return;
         }
         int mid = l + ((r - l) >> 1);
+        mergeSplit(nums, l, mid);
+        mergeSplit(nums, mid + 1, r);
+        merge(nums, l, mid, r);
+    }
+
+    private void merge(T[] nums, int l, int mid, int r) {
         int left = l;
         int right = mid + 1;
-        merge(nums, l, mid);
-        merge(nums, mid + 1, r);
         List<T> temp = new ArrayList<>(r - l + 1);
         while (left <= mid && right <= r) {
             if (less(nums[left], nums[right])) {
                 temp.add(nums[left++]);
-                // temp[index++] = nums[left++];
             } else {
-                // temp[index++] = nums[right++];
                 temp.add(nums[right++]);
             }
         }
