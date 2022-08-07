@@ -12,3 +12,7 @@
 /*.iml
 /.idea/*.iml
 /out/production/offer/queue/*.class
+/out/production/offer/algorithm/sort/*.class
+/out/production/offer/ds/queue/*.class
+/out/production/offer/ds/linklist/*.class
+/out/production/offer/algorithm/bitoperation/*.class
