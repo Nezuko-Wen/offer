@@ -68,6 +68,6 @@ public class CircularQueue {
         for (int i = 0; i < 5; i ++) {
             System.out.println(cq.pop());
         }
-
+        System.out.println();
     }
 }
