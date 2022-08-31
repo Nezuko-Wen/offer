@@ -6,7 +6,7 @@ package ds.queue;
  * @date 2022/8/7 17:07
  */
 public class CircularQueue {
-    private int[] table;
+    private final int[] table;
     private int size = 0; //元素个数
     private int front = 0; //队头
     private int rear = 0; //队尾
