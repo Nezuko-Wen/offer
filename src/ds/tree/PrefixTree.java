@@ -1,6 +1,7 @@
 package ds.tree;
 
 /**
+ * 前缀树
  * @author Wen
  * @date 2022/8/22 22:26
  */

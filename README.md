@@ -146,6 +146,77 @@ eg: [1,3,4,2,5]<br />
 2）字符放在边上，节点上有专属的数据项（常见的是pass和end值）<br />
 3）样本添加方式，每个字符串都从根节点开始加，如果没有路就新建，如果有路就复用<br />
 4）添加时，沿途节点的pass值加1，每个字符串结束时来到的节点end值加1<br />
+```java
+//将字符串插入前缀树中
+public void insert(String str) {
+    if (str == null) {
+        return;
+    }
+    Node node = head;
+    node.pass++;
+    char[] chars = str.toCharArray();
+    for (char aChar : chars) {
+        int index = aChar - 'a';//在哪个节点上
+        if (node.next[index] == null) {
+            node.next[index] = new Node();
+        }
+        node.next[index].pass++;
+        node = node.next[index];
+    }
+    node.end++;
+}
+
+//str出现过几次
+public Integer search(String str) {
+    if (str == null) {
+        return 0;
+    }
+    Node node = head;
+    char[] chars = str.toCharArray();
+    for (char aChar : chars) {
+        int index = aChar - 'a';//在哪个节点上
+        if (node.next[index] == null) {
+            return 0;
+        }
+        node = node.next[index];
+    }
+    return node.end;
+}
+
+public void delete(String str) {
+    if (search(str) > 0) {
+        Node node = head;
+        node.pass--;
+        char[] chars = str.toCharArray();
+        for (char aChar : chars) {
+            int index = aChar - 'a';//在哪个节点上
+            if (--node.next[index].pass == 0) {//pass为0后，后面节点直接丢弃
+                node.next[index] = null;
+                return;
+            }
+            node = node.next[index];
+        }
+        node.end--;
+    }
+}
+
+//以prefix为前缀的字符串个数
+public Integer prefixNumber(String prefix) {
+    if (prefix == null) {
+        return 0;
+    }
+    Node node = head;
+    char[] chars = prefix.toCharArray();
+    for (char aChar : chars) {
+        int index = aChar - 'a';//在哪个节点上
+        if (node.next[index] == null) {
+            return 0;
+        }
+        node = node.next[index];
+    }
+    return node.pass;
+}
+```
 
 end值可查某个字符串出现几次,pass值可查以某个字符串为前缀的字符串出现过几次
 ### 单链表
