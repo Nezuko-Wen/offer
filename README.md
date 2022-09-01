@@ -148,3 +148,27 @@ eg: [1,3,4,2,5]<br />
 4）添加时，沿途节点的pass值加1，每个字符串结束时来到的节点end值加1<br />
 
 end值可查某个字符串出现几次,pass值可查以某个字符串为前缀的字符串出现过几次
+### 单链表
+1.是否有环,找出入环节点<br />
+快慢指针(快指针一次2步，慢指针一次1步),快指针第一次和慢指针相遇后,快指针从头开始和慢指针一同以一次1步前进,再次相遇为入环节点。
+```java
+public Node hasCircle(Node head) {
+    if (head == null || head.next == null || head.next.next == null) {
+        return null;
+    }
+    Node slow = head.next, quick = head.next.next;
+    while (slow != quick) {
+        if (slow == null || quick.next == null) {
+            return null;
+        }
+        slow = slow.next;
+        quick = quick.next.next;
+    }
+    quick = head;
+    while (slow != quick) {
+        slow = slow.next;
+        quick = quick.next;
+    }
+    return slow;
+}
+```
