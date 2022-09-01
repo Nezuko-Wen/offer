@@ -14,5 +14,38 @@ package ds.linklist;
  * @date 2022/8/31 23:45
  */
 public class CircleLinkListQ {
+    private final CircleLinkListUtil util = new CircleLinkListUtil();
 
+    public Node findFirstIntersectNode(Node head1, Node head2) {
+        if (head1 == null || head2 == null) {
+            return null;
+        }
+        if (util.hasCircle(head1) == null && util.hasCircle(head2) == null) {
+            return util.bothNoCircle(head1, head2, null);
+        } else if (util.hasCircle(head1) != null && util.hasCircle(head2) != null) {
+            return util.bothCircle(head1, head2);
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        CircleLinkListQ circleLinkListQ = new CircleLinkListQ();
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
+        Node node5 = new Node(5);
+        Node node6 = new Node(6);
+        Node node7 = new Node(7);
+        Node node8 = new Node(8);
+        Node node9 = new Node(9);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node5;
+        node5.next = node3;
+        node6.next = node7;
+        node7.next = node5;
+        System.out.println(circleLinkListQ.findFirstIntersectNode(node1, node6).val);
+    }
 }
