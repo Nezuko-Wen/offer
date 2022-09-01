@@ -1,6 +1,5 @@
 package ds.tree;
 
-import ds.linklist.Node;
 import leecode.tree.TreeNode;
 
 import java.util.Stack;
