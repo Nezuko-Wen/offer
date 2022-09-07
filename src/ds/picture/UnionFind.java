@@ -42,6 +42,13 @@ public class UnionFind {
             }
         }
 
+        public void register(V v) {
+            Node<V> node = new Node<>(v);
+            nodeHashMap.put(v, node);
+            parentMap.put(node, node);
+            sizeMap.put(node, 1);
+        }
+
         //找代表节点
         public Node<V> findFather(Node<V> cur) {
             Stack<Node<V>> stack = new Stack<>();
