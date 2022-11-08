@@ -5,7 +5,7 @@ package leecode;/*
  */
 
 // @lc code=start
-class Solution {
+class No6 {
     public String convert(String s, int numRows) {
         if (numRows == 0 || numRows == 1) return s;
         int structNum = numRows + numRows - 2;
