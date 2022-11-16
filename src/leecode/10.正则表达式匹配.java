@@ -6,10 +6,8 @@ package leecode;
  * [10] 正则表达式匹配
  */
 
-import java.util.Stack;
-
 // @lc code=start
-class Solution {
+class No10 {
     public boolean isMatch(String s, String p) {
         int m = s.length();
         int n = p.length();
@@ -41,7 +39,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        No10 solution = new No10();
         solution.isMatch("aa", "a");
     }
 
