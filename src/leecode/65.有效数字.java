@@ -5,7 +5,7 @@ package leecode;/*
  */
 
 // @lc code=start
-class Solution {
+class No65 {
 
     public boolean isNumber(String s) {
         char[] chars = s.toCharArray();
