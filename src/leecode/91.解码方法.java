@@ -6,7 +6,7 @@ package leecode;/*
 
 import java.util.Arrays;
 
-// @lc code=start
+// @lc code=start test
 class Solution {
     public int numDecodings(String s) {
         int[] dp = new int[s.length() + 1];
