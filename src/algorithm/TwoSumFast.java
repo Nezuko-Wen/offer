@@ -1,8 +1,6 @@
 package algorithm;
 
-import netscape.javascript.JSObject;
 import utils.In;
-import utils.StdOut;
 
 import java.util.Arrays;
 
