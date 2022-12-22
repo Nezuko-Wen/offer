@@ -7,7 +7,7 @@ package leecode;/*
 import java.util.Arrays;
 
 // @lc code=start test
-class Solution {
+class No91 {
     public int numDecodings(String s) {
         int[] dp = new int[s.length() + 1];
         Arrays.fill(dp, -1);
@@ -34,7 +34,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        No91 solution = new No91();
         System.out.println(solution.numDecodings("0"));
     }
 }
