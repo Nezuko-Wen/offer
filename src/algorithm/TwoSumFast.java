@@ -43,7 +43,7 @@ public class TwoSumFast {
                 "        ]\n" +
                 "    },\n" +
                 "    \"_class\": \"com.middle.dao.domain.RecallLaunch\"";
-        String[] strings = new In("test.txt").;
+        String[] strings = new In("test.txt").readAllStrings();
         StringBuffer ret = new StringBuffer();
         for (String string : strings) {
 
