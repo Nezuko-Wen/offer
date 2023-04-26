@@ -15,7 +15,7 @@ class ListNode:
         self.next = next
 
 
-class Solution:
+class leecode.Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if not list1:
             return list2  # 终止条件，直到两个链表都空
@@ -29,5 +29,5 @@ class Solution:
             return list2
 
 
-sol = Solution()
+sol = leecode.Solution()
 # @lc code=end

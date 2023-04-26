@@ -5,7 +5,7 @@ package leecode;/*
  */
 
 // @lc code=start
-class Solution {
+class No122 {
     //贪心算法
     public int maxProfit(int[] prices) {
         int len = prices.length;
@@ -94,7 +94,7 @@ class Solution {
 
     public static void main(String[] args) {
         int[] price = new int[]{1, 2, 3};
-        Solution solution = new Solution();
+        No122 solution = new No122();
         System.out.println(solution.maxProfit(price));
     }
 

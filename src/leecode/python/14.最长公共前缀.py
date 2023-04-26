@@ -9,7 +9,7 @@
 from typing import List
 
 
-class Solution:
+class leecode.Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         # 遍历
         # if not strs:
