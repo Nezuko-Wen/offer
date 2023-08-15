@@ -25,6 +25,7 @@ var maxPoints = function (points) {
       } else if (y == 0) {
         x = 1;
       } else {
+        //保证斜率的负号在分子或分母上
         if (y < 0) {
           x = -x;
           y = -y;
