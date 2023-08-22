@@ -20,6 +20,7 @@ var longestPalindrome = function (s) {
     let sRet = s.charAt(i),
       dRet = "";
     while ((sFront >= 0 && sTail <= l - 1) || (dFront >= 0 && dTail <= l - 1)) {
+      //奇数回文串
       if (sFront >= 0 && sTail <= l - 1) {
         if (s.charAt(sFront) == s.charAt(sTail)) {
           sRet = s.charAt(sFront).concat(sRet).concat(s.charAt(sFront));
@@ -29,6 +30,7 @@ var longestPalindrome = function (s) {
           sFront = -1;
         }
       }
+      //偶数回文串
       if (dFront >= 0 && dTail <= l - 1) {
         if (s.charAt(dFront) == s.charAt(dTail)) {
           dRet = s.charAt(dFront).concat(dRet).concat(s.charAt(dFront));
