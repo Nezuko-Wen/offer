@@ -91,3 +91,7 @@
 src/leecode/java/Solution.class
 .gitignore
 .idea/.gitignore
+tempCodeRunnerFile
+src/leecode/java/.lcpr_data/bricks.json
+src/leecode/java/.lcpr_data/group.json
+.gitignore
