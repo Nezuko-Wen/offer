@@ -8,7 +8,7 @@ import java.util.List;
  * @date 2025/7/2 13:29
  */
 public class No3333 {
-
+    //
     public int possibleStringCount(String word, int k) {
         // 将原字符串转为数组，单字母连续出现的次数为数组中的元素，遇到一个新字母结算一个数组元素[]{a:3,b:3,a:4} {3,3,4}
         // k的最小值即为数组长度，记为m，即至少每个出现连续块的字母取一次
